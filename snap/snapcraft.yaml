@@ -1,0 +1,45 @@
+name: data-sharing-snap
+base: core22
+version: '0.1'
+summary: A snap for data sharing between snaps.
+description: |
+  A snap for data sharing between snaps.
+
+grade: devel
+confinement: strict
+
+slots:
+  common-content-write:
+    interface: content
+    content: writable-data
+    write: 
+      - $SNAP_COMMON
+
+  common-content-read:
+    interface: content
+    content: readable-data
+    read: 
+      - $SNAP_COMMON
+
+  data-content-write:
+    interface: content
+    content: writable-data
+    write: 
+      - $SNAP_DATA
+  
+  data-content-read:
+    interface: content
+    content: readable-data
+    read: 
+      - $SNAP_DATA
+
+parts:
+  local-files:
+    plugin: dump
+    source: snap/local/
+    organize:
+      '*.sh': usr/bin/
+
+apps:
+  info-app:
+    command: usr/bin/info.sh
