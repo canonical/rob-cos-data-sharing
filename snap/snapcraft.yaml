@@ -28,27 +28,23 @@ grade: devel
 confinement: strict
 
 slots:
-  rob-cos-common-data-write:
+  rob-cos-common-write:
     interface: content
-    content: writable-data
     write: 
       - $SNAP_COMMON
 
-  rob-cos-common-data-read:
+  rob-cos-common-read:
     interface: content
-    content: readable-data
     read: 
       - $SNAP_COMMON
 
   rob-cos-data-write:
     interface: content
-    content: writable-data
     write: 
       - $SNAP_DATA
   
   rob-cos-data-read:
     interface: content
-    content: readable-data
     read: 
       - $SNAP_DATA
 
