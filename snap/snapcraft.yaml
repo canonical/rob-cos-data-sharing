@@ -11,18 +11,18 @@ description: |
 
   It offers the following slots:
 
-  common-content-write: allows plugged snaps to write data in $SNAP_COMMON
-  common-content-read: allows plugged snaps to read data in $SNAP_COMMON
+  rob-cos-common-write: allows plugged snaps to write data in $SNAP_COMMON
+  rob-cos-common-read: allows plugged snaps to read data in $SNAP_COMMON
   data-content-write: allows plugged snaps to write data in $SNAP_DATA
   data-content-read: allows plugged snaps to read data in $SNAP_DATA
 
   Usage:
-  
-  Connect to common-content-write as follows:
-  sudo snap connect rob-cos-snap:common-content-write rob-cos-data-sharing:common-content-write
-  
-  Connect to common-content-read as follows:
-  sudo snap connect rob-cos-snap:common-content-read rob-cos-data-sharing:common-content-read
+
+  Connect to rob-cos-common-write as follows:
+  sudo snap connect rob-cos-snap:rob-cos-common-write rob-cos-data-sharing:rob-cos-common-write
+
+  Connect to rob-cos-common-read as follows:
+  sudo snap connect rob-cos-snap:rob-cos-common-read rob-cos-data-sharing:rob-cos-common-read
 
 grade: devel
 confinement: strict
