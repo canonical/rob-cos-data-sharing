@@ -24,7 +24,7 @@ description: |
   Connect to rob-cos-common-read as follows:
   sudo snap connect rob-cos-snap:rob-cos-common-read rob-cos-data-sharing:rob-cos-common-read
 
-grade: devel
+grade: stable
 confinement: strict
 
 slots:
@@ -56,5 +56,5 @@ parts:
       '*.sh': usr/bin/
 
 apps:
-  info-app:
-    command: usr/bin/info.sh
+  help:
+    command: usr/bin/help.sh

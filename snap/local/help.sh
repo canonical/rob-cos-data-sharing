@@ -7,10 +7,10 @@ to work with the rob-cos ecosystem to easily share data.
 
 It offers the following slots:
 
-rob-cos-common-write: allows plugged snaps to write data in $SNAP_COMMON
-rob-cos-common-read: allows plugged snaps to read data in $SNAP_COMMON
-data-content-write: allows plugged snaps to write data in $SNAP_DATA
-data-content-read: allows plugged snaps to read data in $SNAP_DATA
+- rob-cos-common-write: allows plugged snaps to write data in $SNAP_COMMON
+- rob-cos-common-read: allows plugged snaps to read data in $SNAP_COMMON
+- data-content-write: allows plugged snaps to write data in $SNAP_DATA
+- data-content-read: allows plugged snaps to read data in $SNAP_DATA
 
 Usage:
 
