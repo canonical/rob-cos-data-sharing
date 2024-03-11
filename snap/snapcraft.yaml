@@ -31,22 +31,22 @@ slots:
   rob-cos-common-write:
     interface: content
     write: 
-      - $SNAP_COMMON
+      - $SNAP_COMMON/rob-cos-shared-data
 
   rob-cos-common-read:
     interface: content
     read: 
-      - $SNAP_COMMON
+      - $SNAP_COMMON/rob-cos-shared-data
 
   rob-cos-data-write:
     interface: content
     write: 
-      - $SNAP_DATA
+      - $SNAP_DATA/rob-cos-shared-data
   
   rob-cos-data-read:
     interface: content
     read: 
-      - $SNAP_DATA
+      - $SNAP_DATA/rob-cos-shared-data
 
 parts:
   local-files:
