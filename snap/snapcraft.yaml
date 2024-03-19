@@ -1,0 +1,60 @@
+name: rob-cos-data-sharing
+base: core22
+version: '0.1'
+summary: A snap for data sharing between on device rob cos snaps.
+description: |
+  A snap for data sharing between on device rob cos snaps.
+  Data sharing snap for on device rob cos snaps.\n
+      
+  This snap offers four content sharing interfaces, to allow snaps on a device that is meant
+  to work with the rob-cos ecosystem to easily share data.
+
+  It offers the following slots:
+
+  rob-cos-common-write: allows plugged snaps to write data in $SNAP_COMMON
+  rob-cos-common-read: allows plugged snaps to read data in $SNAP_COMMON
+  data-content-write: allows plugged snaps to write data in $SNAP_DATA
+  data-content-read: allows plugged snaps to read data in $SNAP_DATA
+
+  Usage:
+
+  Connect to rob-cos-common-write as follows:
+  sudo snap connect rob-cos-snap:rob-cos-common-write rob-cos-data-sharing:rob-cos-common-write
+
+  Connect to rob-cos-common-read as follows:
+  sudo snap connect rob-cos-snap:rob-cos-common-read rob-cos-data-sharing:rob-cos-common-read
+
+grade: stable
+confinement: strict
+
+slots:
+  rob-cos-common-write:
+    interface: content
+    write: 
+      - $SNAP_COMMON/rob-cos-shared-data
+
+  rob-cos-common-read:
+    interface: content
+    read: 
+      - $SNAP_COMMON/rob-cos-shared-data
+
+  rob-cos-data-write:
+    interface: content
+    write: 
+      - $SNAP_DATA/rob-cos-shared-data
+  
+  rob-cos-data-read:
+    interface: content
+    read: 
+      - $SNAP_DATA/rob-cos-shared-data
+
+parts:
+  local-files:
+    plugin: dump
+    source: snap/local/
+    organize:
+      '*.sh': usr/bin/
+
+apps:
+  help:
+    command: usr/bin/help.sh
