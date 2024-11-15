@@ -1,6 +1,6 @@
 name: rob-cos-data-sharing
 base: core22
-version: '0.1'
+version: git
 summary: A snap for data sharing between on device rob cos snaps.
 description: |
   A snap for data sharing between on device rob cos snaps.
