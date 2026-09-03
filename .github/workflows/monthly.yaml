@@ -6,6 +6,9 @@ on:
 
 jobs:
   main:
+    permissions:
+      contents: read
+      actions: write
     uses: canonical/rob-cos-data-sharing/.github/workflows/snap.yaml@main
     with:
       branch-name: "main"
